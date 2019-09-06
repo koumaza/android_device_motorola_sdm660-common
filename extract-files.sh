@@ -78,4 +78,8 @@ sed -i "s|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g" "$Q
 TELESERVICELIB="$COMMON_BLOB_ROOT"/vendor/etc/permissions/telephonyservice.xml
 sed -i "s|/system/framework/QtiTelephonyServicelibrary.jar|/vendor/framework/QtiTelephonyServicelibrary.jar|g" "$TELESERVICELIB"
 
+# Load vndk-28 libui for libmot_gpu_mapper
+MOT_GPU_MAPPER="$BLOB_ROOT"/vendor/lib/libmot_gpu_mapper.so
+patchelf --add-needed libui-v28.so "$MOT_GPU_MAPPER"
+
 "$MY_DIR"/setup-makefiles.sh
