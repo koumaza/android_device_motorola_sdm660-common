@@ -18,7 +18,7 @@
 #define VENDOR_LINEAGE_TOUCH_V1_0_KEYDISABLER_H
 
 #include <com/fingerprints/extension/1.0/IFingerprintNavigation.h>
-#include <vendor/lineage/touch/1.0/IKeyDisabler.h>
+#include <vendor/rr/touch/1.0/IKeyDisabler.h>
 
 namespace vendor {
 namespace lineage {
